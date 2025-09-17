@@ -1,0 +1,67 @@
+/* Body - center container vertically and horizontally */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  height: 100vh;            /* full viewport height */
+  text-align: center;
+}
+
+/* Video background full screen */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   
+  z-index: -1; /* keeps video behind content */
+}
+
+/* Container for the buttons and heading */
+.container {
+  position: relative;
+  z-index: 1;
+  background: rgba(2, 0, 0, 0.2); 
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-gap: 15px; /* spacing between buttons */
+  max-width: 900px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Heading spans all columns */
+h1 {
+  grid-column: 1 / -1; /* heading spans all 3 columns */
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Buttons style */
+/* Buttons style - bronze/golden theme */
+.btn {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #b4885b, #d4a373); /* bronze-gold gradient */
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(145deg, #e7cdb3, #b4885b); /* inverse gradient on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
